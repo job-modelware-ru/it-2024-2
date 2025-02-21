@@ -1,10 +1,10 @@
 import babel from '@rollup/plugin-babel';
-const pages = ['hello.js'];
+const pages = ['hello.js', 'login.js', 'register.js', 'edit.js', 'tasks.js'];
 
 const pluginList = [babel({ babelHelpers: 'bundled' })];
 const export_page = pages.reduce((acc, item) => {
     acc.push({
-        input: `./src/${item}`,
+        input: `./src/pages/${item}`,
         output: {
             file: `../server/www/js/${item}`,
             format: 'cjs',

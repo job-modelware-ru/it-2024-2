@@ -1,0 +1,55 @@
+.tasks-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.5em;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    padding: 0.3em 0.6em;
+
+    border-radius: 0.3em;
+    border: 0.1em solid #000;
+    background: white;
+}
+
+.task-checkbox-container {
+    flex: 1;
+}
+
+.task-deadline-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+
+    width: 6em;
+    flex: none;
+}
+
+.task-control-buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 0.5em;
+    
+    width: fit-content;
+    flex: none;
+}
+
+.task-icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    height: fit-content;
+
+    padding: 0.3em;
+}
