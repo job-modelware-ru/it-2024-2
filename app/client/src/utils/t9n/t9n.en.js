@@ -1,9 +1,7 @@
+import { el } from '../../../node_modules/redom/dist/redom.es';
+
 export default {
-    'LOGIN': 'Login',
-    'email': 'Email',
-    'somebody_email': 'somebody@gmail.com',
-    'PASSWORD': 'Password',
-    'TO_LOGIN': 'Log in',
-    'to_register': 'Register',
-    'no_account_question': 'No account?'
+    'LOGIN': (...args) => <strong>L<em>ogin</em></strong>,
+    'PASSWORD': (...args) => 'Password',
+    'TO_LOGIN': (...args) => 'Log in',
 }

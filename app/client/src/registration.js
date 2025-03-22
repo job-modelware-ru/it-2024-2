@@ -1,7 +1,7 @@
 import { mount, el } from '../node_modules/redom/dist/redom.es';
-import RegFrom from './widget/regFrom'
+import RegForm from './widget/regForm'
 
 mount(
     document.getElementById('main'),
-    <RegFrom />
+    <RegForm />
 );
