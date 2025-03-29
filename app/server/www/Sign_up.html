@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <link rel="stylesheet" href="css/bootstrap.css"
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <link>
 </head>
 <body>
@@ -15,19 +15,19 @@
 
                 <label>email</label>
                 <div>
-                    <input placeholder="exampel@mail.ru" class="form-control" type="email">
+                    <input placeholder="exampel@mail.ru" class="form-control" type="email" id="email">
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Password</label>
-                <input placeholder="*******" class="form-control" type="Password">
+                <input placeholder="*******" class="form-control" type="Password" id="p1">
 
             </div>
 
             <div class="form-group">
                 <label>Repeat Password</label>
-                <input placeholder="*******" class="form-control" type="Password">
+                <input placeholder="*******" class="form-control" type="Password" id="p2">
 
             </div>
 
@@ -53,6 +53,40 @@
     <script src="js/popper.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('form').addEventListener('submit', function (e) {
+                const password = document.getElementById('p1').value;
+                const confirmpassword = document.getElementById('p2').value;
+                const email = document.getElementById("email").value;
+                let IsValid = true;
+
+                e.preventDefault()
+                if (email === '' || !email.includes('@') || !email.includes('.')) {
+                    alert('Please enter a valid email address');
+                    e.preventDefault();
+                    IsValid = false;
+                }
+                if (password === '') {
+                    alert('Password cannot be empty');
+                    e.preventDefault();
+                    IsValid = false;
+                    
+                }
+                if (password != confirmpassword) {
+                    alert('Passwords not match');
+                    e.preventDefault();
+                    IsValid = false;
+                    return;
+                }
+
+                if (IsValid) {
+                    window.location.href = 'index.html';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
