@@ -1,3 +1,7 @@
 body {
     background-color: antiquewhite;
 }
+
+.mw-400px {
+    max-width: 400px;
+}
